@@ -103,7 +103,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --font-sans: var(--font-vazir), system-ui, sans-serif;
+  --font-sans: var(--font-iranyekan), system-ui, sans-serif;
 }
 
 /* breakpointها (جداگانه، چون باید داخل @theme عادی باشن) */
