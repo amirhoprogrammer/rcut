@@ -13,8 +13,43 @@ const slides = [
   },
   {
     image: "/2.webp",
+    title: "ابزارهای فرزکاری",
+    text: "مجموعه‌ای از ابزارهای حرفه‌ای برای عملیات ماشین‌کاری",
+  },
+  {
+    image: "/3.webp",
     title: "ابزارهای تراشکاری صنعتی",
     text: "انتخابی مناسب برای کارگاه‌ها و خطوط تولید",
+  },
+  {
+    image: "/4.webp",
+    title: "فرز انگشتی و ابزارهای برشی",
+    text: "انتخاب مناسب ابزار برای افزایش بهره‌وری تولید",
+  },
+  {
+    image: "/5.webp",
+    title: "مته و ابزارهای سوراخکاری",
+    text: "تامین ابزارهای دقیق برای کاربردهای صنعتی",
+  },
+  {
+    image: "/6.webp",
+    title: "قلاویز و ابزارهای رزوه‌زنی",
+    text: "راهکارهای تخصصی برای ایجاد رزوه‌های دقیق",
+  },
+  {
+    image: "/7.webp",
+    title: "ابزارهای اندازه‌گیری دقیق",
+    text: "کنترل کیفیت با تجهیزات اندازه‌گیری صنعتی",
+  },
+  {
+    image: "/8.webp",
+    title: "هولدر و سیستم‌های گیرشی",
+    text: "تجهیزات نگهدارنده ابزار برای ماشین‌کاری حرفه‌ای",
+  },
+  {
+    image: "/9.webp",
+    title: "برندهای معتبر صنعتی",
+    text: "همکاری با تولیدکنندگان مطرح ابزارهای ماشین‌کاری",
   },
 ];
 
@@ -50,7 +85,7 @@ export default function Hero() {
 
                 <div className="relative z-10 flex h-full items-center w90">
                   <div className="">
-                    <h1 className="max-w-xl text-4xl font-bold leading-tight text-white md:text-5xl">
+                    <h1 className="max-w-xl text-4xl font-extrabold leading-tight text-white md:text-5xl">
                       {slide.title}
                     </h1>
                     <p className="mt-4 max-w-xl text-white/80">{slide.text}</p>

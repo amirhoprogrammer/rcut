@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { iranYekan } from "./fonts";
 import Headers from "./Headers/page";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "آرکات | تامین ابزارهای تخصصی ماشین‌کاری",
@@ -15,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fa" dir="rtl" className={iranYekan.variable}>
+    <html lang="fa" dir="rtl" className={cn("font-sans", geist.variable)}>
       <body className="font-sans antialiased">
         <Headers />
         {children}
