@@ -134,6 +134,16 @@
     font-family: var(--font-sans);
     overflow-x: hidden;
   }
+  /* ============================================
+   ۴) کلاس w-90 : عرض ۹۰٪ و وسط‌چین
+   یعنی ۵٪ فاصله از چپ و ۵٪ از راست
+   ============================================ */
+  .w90 {
+    width: 90%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-inline: 24px;
+  }
 
   * {
     border-color: var(--border);
@@ -156,13 +166,4 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--scrollbar-hover);
   }
-}
-
-/* ============================================
-   ۴) کلاس w-90 : عرض ۹۰٪ و وسط‌چین
-   یعنی ۵٪ فاصله از چپ و ۵٪ از راست
-   ============================================ */
-@utility w-90 {
-  width: 90%;
-  margin-inline: auto;
 }

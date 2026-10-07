@@ -3,12 +3,12 @@ import localFont from "next/font/local";
 export const iranYekan = localFont({
   src: [
     {
-      path: "../fonts/iranYekan/Qs_Iranyekan thin.ttf",
+      path: "../fonts/iranYekan/Qs_Iranyekan_thin.ttf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../fonts/iranYekan/Qs_Iranyekan light.ttf",
+      path: "../fonts/iranYekan/Qs_Iranyekan_light.ttf",
       weight: "300",
       style: "normal",
     },
@@ -18,17 +18,17 @@ export const iranYekan = localFont({
       style: "normal",
     },
     {
-      path: "../fonts/iranYekan/Qs_Iranyekan medium.ttf",
+      path: "../fonts/iranYekan/Qs_Iranyekan_medium.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../fonts/iranYekan/Qs_Iranyekan bold.ttf",
+      path: "../fonts/iranYekan/Qs_Iranyekan_bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../fonts/iranYekan/Qs_Iranyekan extrabold.ttf.ttf",
+      path: "../fonts/iranYekan/Qs_Iranyekan_extrabold.ttf",
       weight: "800",
       style: "normal",
     },
