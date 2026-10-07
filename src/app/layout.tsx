@@ -4,8 +4,9 @@ import Headers from "./Headers/page";
 import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Footers from "./Footers/page";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "آرکات | تامین ابزارهای تخصصی ماشین‌کاری",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <Headers />
         {children}
+        <Footers />
       </body>
     </html>
   );
