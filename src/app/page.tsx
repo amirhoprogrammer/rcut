@@ -1,9 +1,9 @@
-import Headers from "./Headers/page";
+import Heros from "./Heros/page";
 
 export default function Home() {
   return (
-    <div className="flex">
-      <Headers />
+    <div>
+      <Heros />
     </div>
   );
 }

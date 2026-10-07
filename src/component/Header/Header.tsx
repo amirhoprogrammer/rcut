@@ -11,7 +11,7 @@ const HeaderItems = [
 ];
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur ">
+    <header className=" w-full border-b border-border bg-background/95 backdrop-blur ">
       <div className="flex items-center justify-between w90 py-5">
         <div className="logo">
           <Image src={"/logo2.webp"} alt={"logo"} width={100} height={100} />

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { iranYekan } from "./fonts";
+import Headers from "./Headers/page";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir="rtl" className={iranYekan.variable}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <Headers />
+        {children}
+      </body>
     </html>
   );
 }
