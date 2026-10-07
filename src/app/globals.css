@@ -1,26 +1,168 @@
 @import "tailwindcss";
 
+/* ============================================
+   ۱) متغیرهای رنگ و تنظیمات پایه
+   ============================================ */
 :root {
+  --radius: 0.625rem;
+
   --background: #ffffff;
-  --foreground: #171717;
+  --secondary-bg: #f7f6f3;
+  --foreground: #252525;
+
+  --custom-primary: #c78c16;
+  --primary: #2a2a29;
+  --primary-hover: #181817;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f3ecde;
+  --secondary-foreground: #2a2a29;
+  --tertiary: #faf9f7;
+
+  --muted: #f3f2ef;
+  --muted-foreground: #6f6f6f;
+
+  --card: #ffffff;
+  --card-foreground: #252525;
+  --card-secondary: #f8f7f4;
+  --card-tertiary: #efede7;
+
+  --border: #dedbd3;
+  --border-secondary: #bdb8ad;
+  --input: #e8e5de;
+  --ring: #c78c16;
+
+  --accent: #c78c16;
+  --accent-foreground: #201807;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --success: #168a46;
+  --success-foreground: #ffffff;
+  --warning: #e6a01b;
+  --warning-foreground: #241a06;
+  --info: #2563eb;
+  --info-foreground: #ffffff;
+
+  --popover: #ffffff;
+  --popover-foreground: #252525;
+
+  --scrollbar: #c8c4bb;
+  --scrollbar-hover: #c78c16;
+
+  --footer-bg: #20201f;
+  --footer-foreground: #ffffff;
+  --footer-muted: #aaa8a2;
+  --footer-border: #393936;
 }
 
+/* ============================================
+   ۲) معرفی رنگ‌ها و breakpointها به Tailwind
+   ============================================ */
 @theme inline {
   --color-background: var(--background);
+  --color-secondary-bg: var(--secondary-bg);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-brand: var(--custom-primary);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-tertiary: var(--tertiary);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-card-secondary: var(--card-secondary);
+  --color-card-tertiary: var(--card-tertiary);
+
+  --color-border: var(--border);
+  --color-border-secondary: var(--border-secondary);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+
+  --color-footer-bg: var(--footer-bg);
+  --color-footer-foreground: var(--footer-foreground);
+  --color-footer-muted: var(--footer-muted);
+  --color-footer-border: var(--footer-border);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --font-sans: var(--font-vazir), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* breakpointها (جداگانه، چون باید داخل @theme عادی باشن) */
+@theme {
+  --breakpoint-xs: 30rem; /* 480px  - موبایل بزرگ */
+  --breakpoint-sm: 40rem; /* 640px  */
+  --breakpoint-md: 48rem; /* 768px  - تبلت */
+  --breakpoint-lg: 64rem; /* 1024px - لپ‌تاپ */
+  --breakpoint-xl: 80rem; /* 1280px - دسکتاپ */
+  --breakpoint-2xl: 96rem; /* 1536px - مانیتور بزرگ */
+  --breakpoint-3xl: 120rem; /* 1920px - فول‌اچ‌دی */
+}
+
+/* ============================================
+   ۳) استایل‌های پایه
+   ============================================ */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  ::selection {
+    background: var(--custom-primary);
+    color: #fff;
+  }
+
+  /* اسکرول‌بار */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================
+   ۴) کلاس w-90 : عرض ۹۰٪ و وسط‌چین
+   یعنی ۵٪ فاصله از چپ و ۵٪ از راست
+   ============================================ */
+@utility w-90 {
+  width: 90%;
+  margin-inline: auto;
 }
