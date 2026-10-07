@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { iranYekan } from "./fonts";
+//import { iranYekan } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fa" dir="rtl" className={iranYekan.variable}>
+    <html lang="fa" dir="rtl">
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
