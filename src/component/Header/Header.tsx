@@ -1,18 +1,30 @@
 import Image from "next/image";
-import HeaderItem from "./HeaderItem";
+import HeaderItem, { HeaderLink } from "./HeaderItem";
 import "../../app/globals.css";
-const HeaderItems = [
-  { name: "خانه", headerLink: "#" },
-  { name: "محصولات", headerLink: "#" },
-  { name: "نمایندگی یاماسا", headerLink: "#" },
-  { name: "درباره ما", headerLink: "#" },
-  { name: "تماس با ما", headerLink: "#" },
-  { name: "سوالات متداول", headerLink: "#" },
+const HeaderItems: HeaderLink[] = [
+  { name: "خانه", id: "home" },
+  {
+    name: "محصولات",
+    id: "products",
+    children: [
+      { name: "الماس", id: "products" },
+      { name: "فرز انگشتی", id: "products" },
+      { name: "مته", id: "products" },
+      { name: "قلاویز", id: "products" },
+      { name: "اندازه‌گیری", id: "products" },
+      { name: "هولدر", id: "products" },
+    ],
+  },
+  { name: "نمایندگی یاماسا", id: "yamasa" },
+  { name: "درباره ما", id: "about" },
+  { name: "تماس با ما", id: "contact" },
+  { name: "سوالات متداول", id: "faq" },
 ];
 export default function Header() {
   return (
-    <header className=" w-full border-b border-border bg-background/95 backdrop-blur ">
-      <div className="flex items-center justify-between w90 py-5">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur ">
+      {/* 100px = 25 */}
+      <div className="flex items-center justify-between w90 h-25 ">
         <div className="logo">
           <Image src={"/logo2.webp"} alt={"logo"} width={100} height={100} />
         </div>

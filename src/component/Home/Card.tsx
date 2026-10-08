@@ -1,13 +1,11 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-
 export interface CardItems {
   imageUrl: string;
   alt: string;
   title: string;
   text: string;
 }
-
 export default function Card({ items }: { items: CardItems }) {
   return (
     <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors duration-300 hover:border-brand">
@@ -29,7 +27,7 @@ export default function Card({ items }: { items: CardItems }) {
           {items.text}
         </p>
         {/* pt-8 = حداقل ۳۲px فاصله بین متن و دکمه */}
-        <div className="mt-auto pt-12">
+        <div className="mt-auto pt-14">
           <Button size="full" className="text-base font-semibold">
             استعلام قیمت
           </Button>
