@@ -1,38 +1,38 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React from "react";
-interface CardItems {
+import { Button } from "@/components/ui/button";
+
+export interface CardItems {
   imageUrl: string;
   alt: string;
   title: string;
   text: string;
-  buttonText: string;
 }
 
 export default function Card({ items }: { items: CardItems }) {
   return (
-    <div className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-      <Image src={items.imageUrl} alt={items.alt} width={0} height={0} />
-      <div className="flex flex-col items-center justify-between">
-        <div className="flex flex-col gap-5">
-          <div>
-            <h3 className="text-foreground min-h-6 text-base font-bold">
-              {items.title}
-            </h3>
-          </div>
-          <div>
-            {/* 48px = 12 */}
-            <p className="text-muted-foreground mt-3 line-clamp-2 min-h-12 text-sm leading-6">
-              {items.text}
-            </p>
-          </div>
-        </div>
-        <div>
-          <Button
-            className="bg-custom-primary w-full cursor-pointer rounded-lg py-2.5 text-[15px] font-semibold text-white transition-colors duration-300"
-            value={items.buttonText}
-          />
-        </div>
+    <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors duration-300 hover:border-brand">
+      {/* aspect-[4/3] = aspect-4/3 */}
+      <div className="relative aspect-4/3 w-full border-b border-border">
+        <Image
+          src={items.imageUrl}
+          alt={items.alt}
+          fill
+          sizes="(min-width:1536px) 20vw, (min-width:1280px) 25vw, (min-width:768px) 33vw, (min-width:640px) 50vw, 100vw"
+          className="object-contain p-4"
+        />
+      </div>
+
+      {/* متن */}
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="text-base font-bold text-foreground">{items.title}</h3>
+        <p className="mt-3 line-clamp-2 min-h-12 text-sm leading-6 text-muted-foreground">
+          {items.text}
+        </p>
+
+        {/* mt-auto دکمه رو همیشه ته کارت نگه می‌داره */}
+        <Button size="full" className="mt-auto h-12 font-semibold">
+          استعلام قیمت
+        </Button>
       </div>
     </div>
   );
