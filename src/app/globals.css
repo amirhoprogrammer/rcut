@@ -153,6 +153,7 @@
 /* breakpointها (جداگانه، چون باید داخل @theme عادی باشن) */
 @theme {
   --breakpoint-xs: 30rem; /* 480px  - موبایل بزرگ */
+  --breakpoint-xls: 36.25rem; /* 580px*/
   --breakpoint-sm: 40rem; /* 640px  */
   --breakpoint-md: 48rem; /* 768px  - تبلت */
   --breakpoint-lg: 64rem; /* 1024px - لپ‌تاپ */
@@ -172,7 +173,6 @@
     -webkit-tap-highlight-color: transparent;
     @apply font-sans;
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* ارتفاع هدر */
   }
 
   body {

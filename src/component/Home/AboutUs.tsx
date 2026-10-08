@@ -11,8 +11,8 @@ export default function AboutUs() {
   return (
     <section className="py-28">
       <div className="w90" dir="rtl">
-        <div className="flex items-center gap-10">
-          <div className="leftside text-right w-[52%]">
+        <div className="flex gap-10 sm:flex-col md:flex-col lg:flex-row ">
+          <div className="leftside w-[90%] text-right lg:w-[52%] ">
             {/* [1.25] = tight */}
             <h2 className="about-brand-title text-6xl leading-tight font-bold xl:text-7xl">
               <span className="block text-foreground">دقت و کیفیت</span>
@@ -25,7 +25,7 @@ export default function AboutUs() {
               ماشین‌کاری
             </p>
           </div>
-          <div className="rightside about-content text-right w-[48%]">
+          <div className="rightside about-content text-right w-[90%] lg:w-[48%]">
             <div className="space-y-7 text-lg leading-10 text-muted-foreground">
               <p>{texts.text1}</p>
               <p>{texts.text2}</p>

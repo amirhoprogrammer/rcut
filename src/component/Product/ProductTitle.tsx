@@ -10,7 +10,7 @@ export default function ProductTitle({
   value: string;
 }) {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex flex-col items-start gap-6 xls:flex-row xls:items-center xls:justify-between">
       <Title items={items} />
       <Button variant="outline" className="px-7 py-3 ">
         {value}

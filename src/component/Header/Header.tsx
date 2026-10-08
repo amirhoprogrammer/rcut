@@ -22,7 +22,7 @@ const HeaderItems: HeaderLink[] = [
 ];
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur ">
+    <header className="relative z-50 w-full border-b border-border bg-background/95 backdrop-blur ">
       {/* 100px = 25 */}
       <div className="flex items-center justify-between w90 h-25 ">
         <div className="logo">

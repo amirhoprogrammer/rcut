@@ -1,6 +1,6 @@
 import React from "react";
 import ProductTitle from "./ProductTitle";
-import ProductGrid from "../Home/ProductGrid";
+import ProductGrid from "../Product/ProductGrid";
 import { ProductSelectionItem } from "@/Data/productSelection";
 import ProductSlider from "./ProductSlider";
 
