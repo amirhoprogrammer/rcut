@@ -12,7 +12,7 @@ export default function Card({ items }: { items: CardItems }) {
   return (
     <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors duration-300 hover:border-brand">
       {/* aspect-[4/3] = aspect-4/3 */}
-      <div className="relative aspect-4/3 w-full border-b border-border">
+      <div className="relative h-60 w-full border-b border-border">
         <Image
           src={items.imageUrl}
           alt={items.alt}
@@ -25,14 +25,15 @@ export default function Card({ items }: { items: CardItems }) {
       {/* متن */}
       <div className="flex flex-1 flex-col p-5">
         <h3 className="text-base font-bold text-foreground">{items.title}</h3>
-        <p className="mt-3 line-clamp-2 min-h-12 text-sm leading-6 text-muted-foreground">
+        <p className="mt-3 line-clamp-2 min-h-12 text-sm leading-6 text-muted-foreground ">
           {items.text}
         </p>
-
-        {/* mt-auto دکمه رو همیشه ته کارت نگه می‌داره */}
-        <Button size="full" className="mt-auto h-12 font-semibold">
-          استعلام قیمت
-        </Button>
+        {/* pt-8 = حداقل ۳۲px فاصله بین متن و دکمه */}
+        <div className="mt-auto pt-12">
+          <Button size="full" className="text-base font-semibold">
+            استعلام قیمت
+          </Button>
+        </div>
       </div>
     </div>
   );

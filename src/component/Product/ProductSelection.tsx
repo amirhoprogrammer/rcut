@@ -2,6 +2,7 @@ import React from "react";
 import ProductTitle from "./ProductTitle";
 import ProductGrid from "../Home/ProductGrid";
 import { ProductSelectionItem } from "@/Data/productSelection";
+import ProductSlider from "./ProductSlider";
 
 const ProductTitles = {
   title: "محصولات منتخب آرکات",
@@ -13,7 +14,8 @@ export default function ProductSelection() {
     <section className="py-24">
       <div className="w90" dir="rtl">
         <ProductTitle items={ProductTitles} value={value} />
-        <ProductGrid products={ProductSelectionItem} />
+
+        <ProductSlider products={ProductSelectionItem} />
       </div>
     </section>
   );

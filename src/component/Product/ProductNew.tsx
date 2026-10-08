@@ -3,6 +3,7 @@ import ProductTitle from "./ProductTitle";
 import { value } from "./ProductSelection";
 import ProductGrid from "../Home/ProductGrid";
 import { ProductSelectionItem } from "@/Data/productSelection";
+import ProductSlider from "./ProductSlider";
 const ProductTitles = {
   title: "محصولات جدید",
   text: "جدیدترین ابزارهای اضافه شده به مجموعه آرکات",
