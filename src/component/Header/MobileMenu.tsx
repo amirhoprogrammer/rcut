@@ -61,7 +61,7 @@ export default function MobileMenu({ items }: { items: HeaderLink[] }) {
       {/* پنل کشویی (از راست) */}
       <aside
         dir="rtl"
-        className={`fixed right-0 top-0 z-70 flex h-full w-[85%] max-w-sm flex-col bg-background shadow-2xl transition-transform duration-300 lg:hidden ${
+        className={`fixed right-0 top-0 z-70 flex h-full w-[50%] max-w-sm flex-col bg-background shadow-2xl transition-transform duration-300 lg:hidden ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

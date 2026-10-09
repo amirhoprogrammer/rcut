@@ -10,7 +10,7 @@ export default function Icon({ items }: { items: IconTitle }) {
       <div className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110">
         {items.icon}
       </div>
-      <p className="text-lg font-semibold text-foreground transition-colors duration-300 group-hover:text-brand">
+      <p className="text-lg font-medium md:font-semibold text-foreground transition-colors duration-300 group-hover:text-brand">
         {items.title}
       </p>
     </div>

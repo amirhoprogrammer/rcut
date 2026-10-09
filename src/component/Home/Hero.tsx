@@ -82,24 +82,24 @@ export default function Hero() {
               key={slide.title}
               className="min-w-0 shrink-0 grow-0 basis-full"
             >
-              {/* 700px = 175 */}
-              <div className="relative h-175 w-full overflow-hidden">
+              {/* 700px = 175 , ۴۰۰px موبایل، ۴۵۰px، ۵۵۰px تبلت و ۷۰۰px دسکتاپ.*/}
+              <div className="relative h-175 w-full overflow-hidden xs:h-112.5 md:h-137.5 xl:h-175">
                 <Image
                   src={slide.image}
                   alt={slide.title}
                   fill
                   sizes="100vw"
                   priority={i === 0}
-                  className="object-cover"
+                  className="object-cover object-left lg:object-center"
                 />
                 <div className="absolute inset-0 bg-black/40" />
 
                 <div className="relative z-10 flex h-full items-center w90">
-                  <div className="flex flex-col gap-5">
-                    <h1 className="max-w-xl text-4xl font-extrabold leading-tight text-white md:text-5xl">
+                  <div className="flex flex-col gap-6">
+                    <h1 className="max-w-xl text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">
                       {slide.title}
                     </h1>
-                    <p className="mt-4 max-w-xl text-white/80">{slide.text}</p>
+                    <p className="max-w-xl text-white/80">{slide.text}</p>
                   </div>
                 </div>
               </div>

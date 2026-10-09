@@ -6,17 +6,33 @@ const titleSend = {
   title: "روش‌های ارسال",
   text: "سفارش‌های شما با روش‌های مطمئن و متناسب با نیازتان ارسال می‌شود",
 };
+//48px = 12 , 36px = 9 , 24px = 6
 const icons = [
   {
-    icon: <Truck className="w-12 h-12 text-brand" strokeWidth={1.5} />,
+    icon: (
+      <Truck
+        className="w-6 h-6 md:w-9 md:h-9 lg:w-12 lg:h-12 text-brand"
+        strokeWidth={1.5}
+      />
+    ),
     title: "باربری",
   },
   {
-    icon: <Package className="w-12 h-12 text-brand" strokeWidth={1.5} />,
+    icon: (
+      <Package
+        className="w-6 h-6 md:w-9 md:h-9 lg:w-12 lg:h-12 text-brand"
+        strokeWidth={1.5}
+      />
+    ),
     title: "پست",
   },
   {
-    icon: <Boxes className="w-12 h-12 text-brand" strokeWidth={1.5} />,
+    icon: (
+      <Boxes
+        className="w-6 h-6 md:w-9 md:h-9 lg:w-12 lg:h-12 text-brand"
+        strokeWidth={1.5}
+      />
+    ),
     title: "تیپاکس",
   },
 ];
