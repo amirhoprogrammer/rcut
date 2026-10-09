@@ -12,7 +12,7 @@ const buttonVariants = cva(
         neutral:
           "border border-border bg-background text-foreground hover:bg-brand",
         outline:
-          "border border-brand text-brand bg-transparent hover:bg-brand hover:text-white", // «مشاهده همه محصولات»
+          "border border-brand text-brand font-semibold bg-transparent hover:bg-brand hover:text-white", // «مشاهده همه محصولات»
         dark: "bg-primary text-white hover:bg-primary-hover",
         light: "bg-white text-foreground hover:bg-secondary", // روی عکس تیره
         ghost: "hover:bg-secondary text-foreground",

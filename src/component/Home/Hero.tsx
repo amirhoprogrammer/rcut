@@ -95,7 +95,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-black/40" />
 
                 <div className="relative z-10 flex h-full items-center w90">
-                  <div className="">
+                  <div className="flex flex-col gap-5">
                     <h1 className="max-w-xl text-4xl font-extrabold leading-tight text-white md:text-5xl">
                       {slide.title}
                     </h1>

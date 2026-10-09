@@ -10,7 +10,7 @@ export default function Card({ items }: { items: CardItems }) {
   return (
     <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors duration-300 hover:border-brand">
       {/* aspect-[4/3] = aspect-4/3 */}
-      <div className="relative h-60 w-full border-b border-border">
+      <div className="relative block aspect-square shrink-0">
         <Image
           src={items.imageUrl}
           alt={items.alt}
