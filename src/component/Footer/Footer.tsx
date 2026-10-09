@@ -16,8 +16,11 @@ export default function Footer() {
           <FooterContact items={FooterContactItem} />
         </div>
       </div>
-      <div className="border-footer-border border-t">
-        <div className="w90 flex items-center justify-between py-5" dir="rtl">
+      <div className="border-footer-border border-t ">
+        <div
+          className="w90 flex flex-col gap-5 items-center lg:flex-row lg:justify-between py-5"
+          dir="rtl"
+        >
           <p className="text-sm">
             کلیه حقوق مادی و معنوی این وب‌سایت متعلق به آرکات است.
           </p>

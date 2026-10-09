@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeaderItem, { HeaderLink } from "./HeaderItem";
 import "../../app/globals.css";
+import MobileMenu from "./MobileMenu";
 const HeaderItems: HeaderLink[] = [
   { name: "خانه", id: "home" },
   {
@@ -22,20 +23,34 @@ const HeaderItems: HeaderLink[] = [
 ];
 export default function Header() {
   return (
-    <header className="relative z-50 w-full border-b border-border bg-background/95 backdrop-blur ">
+    <header className="relative z-50 w-full border-b border-border bg-background/95">
       {/* 100px = 25 */}
       <div className="flex items-center justify-between w90 h-25 ">
+        {/* راست: همبرگری (موبایل) / لوگو (دسکتاپ) */}
+        <div className="flex items-center lg:hidden">
+          <MobileMenu items={HeaderItems} />
+        </div>
         <div className="logo">
           <Image src={"/logo2.webp"} alt={"logo"} width={100} height={100} />
         </div>
-        {/* منو */}
+        {/* <div className="max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2">
+          <Image
+            src="/logo2.webp"
+            alt="آرکات"
+            width={100}
+            height={100}
+            className="h-auto w-20 lg:w-25"
+            priority
+          />
+        </div> */}
+        {/* منوی دسکتاپ */}
         <nav className="hidden items-center gap-x-6 lg:flex 2xl:gap-x-8">
           {HeaderItems.map((item) => (
             <HeaderItem key={item.name} items={item} />
           ))}
         </nav>
         {/*230px = 57.5, 42px =10.5*/}
-        <div className="shrink-0">
+        <div className="shrink-0 hidden lg:block">
           <div className="relative w-57.5">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -18,14 +18,27 @@ export default function HeaderItem({ items }: { items: HeaderLink }) {
 
   useEffect(() => {
     const el = document.getElementById(items.id);
-    if (!el) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsActive(entry.isIntersecting),
-      { rootMargin: "-40% 0px -55% 0px" } // وقتی بخش وسط صفحه‌ست
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
+    const observer = el
+      ? new IntersectionObserver(
+          ([entry]) => setIsActive(entry.isIntersecting),
+          { rootMargin: "-30% 0px -60% 0px" }
+        )
+      : null;
+    if (el) observer?.observe(el);
+
+    const onScroll = () => {
+      if (items.id === "home") setIsActive(window.scrollY < 100);
+    };
+    if (items.id === "home") {
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    }
+
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener("scroll", onScroll);
+    };
   }, [items.id]);
 
   return (

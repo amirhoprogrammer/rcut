@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const slides = [
   {
@@ -54,16 +55,26 @@ const slides = [
 ];
 
 export default function Hero() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    direction: "rtl",
-  });
+  const autoplay = useRef(
+    Autoplay({
+      delay: 4000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: false,
+    })
+  );
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      direction: "rtl",
+    },
+    [autoplay.current]
+  );
 
   const prev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const next = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="relative overflow-hidden" dir="rtl">
+    <section id="home" className="relative overflow-hidden" dir="rtl">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide, i) => (
