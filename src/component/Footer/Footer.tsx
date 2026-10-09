@@ -25,10 +25,35 @@ export default function Footer() {
             کلیه حقوق مادی و معنوی این وب‌سایت متعلق به آرکات است.
           </p>
           <div className="flex gap-3">
-            <Image src={imageUrls[0]} alt="insta" width={50} height={50} />
-            <Image src={imageUrls[1]} alt="whatsapp" width={50} height={50} />
-            <Image src={imageUrls[2]} alt="bale" width={50} height={50} />
-            <Image src={imageUrls[3]} alt="eitaa" width={50} height={50} />
+            {/* 30px = 7.5 , 40px = 10, 50px = 12.5*/}
+            <Image
+              src={imageUrls[0]}
+              alt="insta"
+              width={50}
+              height={50}
+              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5"
+            />
+            <Image
+              src={imageUrls[1]}
+              alt="whatsapp"
+              width={50}
+              height={50}
+              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5"
+            />
+            <Image
+              src={imageUrls[2]}
+              alt="bale"
+              width={50}
+              height={50}
+              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5"
+            />
+            <Image
+              src={imageUrls[3]}
+              alt="eitaa"
+              width={50}
+              height={50}
+              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5"
+            />
           </div>
           <p className="text-sm">طراحی و توسعه توسط آتی هوش بنیان</p>
         </div>

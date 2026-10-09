@@ -35,7 +35,7 @@ export default function ProductSlider({ products }: { products: CardItems[] }) {
       <div className="mt-8 flex justify-end gap-2" dir="ltr">
         <Button
           variant="neutral"
-          className="text-foreground"
+          className="text-foreground cursor-pointer"
           size="icon"
           onClick={next}
           aria-label="بعدی"
@@ -45,7 +45,7 @@ export default function ProductSlider({ products }: { products: CardItems[] }) {
         <Button
           size="icon"
           variant="neutral"
-          className="text-foreground"
+          className="text-foreground cursor-pointer"
           onClick={prev}
           aria-label="قبلی"
         >

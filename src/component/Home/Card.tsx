@@ -28,7 +28,10 @@ export default function Card({ items }: { items: CardItems }) {
         </p>
         {/* pt-8 = حداقل ۳۲px فاصله بین متن و دکمه */}
         <div className="mt-8">
-          <Button size="full" className="text-base font-semibold">
+          <Button
+            size="full"
+            className="text-base font-semibold cursor-pointer"
+          >
             استعلام قیمت
           </Button>
         </div>

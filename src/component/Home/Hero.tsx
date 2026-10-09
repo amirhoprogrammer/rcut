@@ -113,14 +113,14 @@ export default function Hero() {
         <button
           onClick={prev}
           aria-label="قبلی"
-          className="flex size-12 items-center justify-center rounded-2xl border border-white/30 bg-black/30 text-white backdrop-blur hover:bg-brand"
+          className="flex size-12 items-center justify-center rounded-2xl border border-white/30 bg-black/30 text-white backdrop-blur cursor-pointer hover:bg-brand"
         >
           <ArrowRight />
         </button>
         <button
           onClick={next}
           aria-label="بعدی"
-          className="flex size-12 items-center justify-center rounded-2xl border border-white/30 bg-black/30 text-white backdrop-blur hover:bg-brand"
+          className="flex size-12 items-center justify-center rounded-2xl border border-white/30 bg-black/30 text-white backdrop-blur cursor-pointer hover:bg-brand"
         >
           <ArrowLeft />
         </button>

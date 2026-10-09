@@ -2,6 +2,7 @@ import Image from "next/image";
 import HeaderItem, { HeaderLink } from "./HeaderItem";
 import "../../app/globals.css";
 import MobileMenu from "./MobileMenu";
+import { Search } from "lucide-react";
 const HeaderItems: HeaderLink[] = [
   { name: "خانه", id: "home" },
   {
@@ -31,7 +32,14 @@ export default function Header() {
           <MobileMenu items={HeaderItems} />
         </div>
         <div className="logo">
-          <Image src={"/logo2.webp"} alt={"logo"} width={100} height={100} />
+          {/* 100px = 25 , 90px = 22.5, 80px = 20, 60px = 15*/}
+          <Image
+            src={"/logo2.webp"}
+            alt={"logo"}
+            width={100}
+            height={100}
+            className="w-15 h-15 md:w-20 md:h-20 lg:w-22.5 lg:h-22.5"
+          />
         </div>
         {/* <div className="max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2">
           <Image
@@ -76,6 +84,15 @@ export default function Header() {
             />
           </div>
         </div>
+
+        {/* چپ: دکمه سرچ (فقط زیر 1024) */}
+        <button
+          type="button"
+          aria-label="جستجو"
+          className="flex size-11 items-center justify-center rounded-lg border border-border bg-background text-foreground transition-colors hover:border-brand hover:text-brand lg:hidden"
+        >
+          <Search className="size-5" />
+        </button>
       </div>
     </header>
   );

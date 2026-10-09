@@ -27,10 +27,10 @@ export default function Send() {
       <div className="w90">
         {/* عنوان */}
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-foreground md:text-4xl">
+          <h2 className="text-4xl font-extrabold text-foreground ">
             {titleSend.title}
           </h2>
-          <p className="mt-3 text-muted-foreground">{titleSend.text}</p>
+          <p className="mt-4 text-muted-foreground">{titleSend.text}</p>
         </div>
 
         {/* آیتم‌ها */}
