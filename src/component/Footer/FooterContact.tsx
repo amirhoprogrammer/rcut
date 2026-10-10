@@ -4,7 +4,6 @@ const isPhoneNumber = (value: string | number): boolean => {
   return /^[\d\s\-\+()]+$/.test(String(value));
 };
 
-// رندر کردن یک آیتم که ممکنه شامل <br> باشه
 const renderItem = (item: string | number) => {
   const text = String(item);
   const parts = text.split("<br>");

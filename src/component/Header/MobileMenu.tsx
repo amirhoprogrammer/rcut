@@ -10,7 +10,6 @@ export default function MobileMenu({ items }: { items: HeaderLink[] }) {
   const [expanded, setExpanded] = useState<string | null>(null);
   const [activeId, setActiveId] = useState("home");
 
-  // قفل اسکرول صفحه وقتی منو بازه + بستن با Escape
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
@@ -21,7 +20,6 @@ export default function MobileMenu({ items }: { items: HeaderLink[] }) {
     };
   }, [open]);
 
-  // اگه صفحه بزرگ شد (>=1024) منو بسته بشه
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 64rem)");
     const onChange = () => mq.matches && setOpen(false);
@@ -32,7 +30,6 @@ export default function MobileMenu({ items }: { items: HeaderLink[] }) {
   function go(id: string) {
     setActiveId(id);
     setOpen(false);
-    // صبر می‌کنیم قفل اسکرول برداشته بشه، بعد اسکرول کنیم
     setTimeout(() => {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     }, 50);
@@ -40,7 +37,6 @@ export default function MobileMenu({ items }: { items: HeaderLink[] }) {
 
   return (
     <>
-      {/* دکمه همبرگری */}
       <button
         type="button"
         aria-label="باز کردن منو"
@@ -50,22 +46,18 @@ export default function MobileMenu({ items }: { items: HeaderLink[] }) {
         <Menu className="size-5" />
       </button>
 
-      {/* پس‌زمینه تیره و تار */}
       <div
         onClick={() => setOpen(false)}
         className={`fixed inset-0 z-60 bg-black/40 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
-
-      {/* پنل کشویی (از راست) */}
       <aside
         dir="rtl"
         className={`fixed right-0 top-0 z-70 flex h-full w-[50%] max-w-sm flex-col bg-background shadow-2xl transition-transform duration-300 lg:hidden ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* بالای پنل */}
         <div className="flex items-center justify-between border-b border-border p-4">
           <Image
             src="/logo2.webp"
@@ -84,7 +76,6 @@ export default function MobileMenu({ items }: { items: HeaderLink[] }) {
           </button>
         </div>
 
-        {/* لیست آیتم‌ها */}
         <nav className="flex-1 overflow-y-auto p-4">
           <ul className="flex flex-col gap-1">
             {items.map((item) => {
@@ -116,7 +107,6 @@ export default function MobileMenu({ items }: { items: HeaderLink[] }) {
                     )}
                   </button>
 
-                  {/* زیرمنو (آکاردئونی) */}
                   {item.children && (
                     <div
                       className={`grid transition-all duration-300 ${

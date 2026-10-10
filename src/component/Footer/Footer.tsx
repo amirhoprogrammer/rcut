@@ -31,28 +31,28 @@ export default function Footer() {
               alt="insta"
               width={50}
               height={50}
-              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5"
+              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5 rounded-2xl"
             />
             <Image
               src={imageUrls[1]}
               alt="whatsapp"
               width={50}
               height={50}
-              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5"
+              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5 rounded-2xl"
             />
             <Image
               src={imageUrls[2]}
               alt="bale"
               width={50}
               height={50}
-              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5"
+              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5 rounded-2xl"
             />
             <Image
               src={imageUrls[3]}
               alt="eitaa"
               width={50}
               height={50}
-              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5"
+              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5 rounded-2xl"
             />
           </div>
           <p className="text-sm">طراحی و توسعه توسط آتی هوش بنیان</p>

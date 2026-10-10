@@ -27,31 +27,19 @@ export default function Header() {
     <header className="relative z-50 w-full border-b border-border bg-background/95">
       {/* 100px = 25 */}
       <div className="flex items-center justify-between w90 h-25 ">
-        {/* راست: همبرگری (موبایل) / لوگو (دسکتاپ) */}
         <div className="flex items-center lg:hidden">
           <MobileMenu items={HeaderItems} />
         </div>
-        <div className="logo">
-          {/* 100px = 25 , 90px = 22.5, 80px = 20, 60px = 15*/}
+        <div className="logo shrink-0">
+          {/* 100px = 25 , 90px = 22.5, 80px = 20, 60px = 15 , 50px = 12.5 */}
           <Image
             src={"/logo2.webp"}
             alt={"logo"}
-            width={100}
-            height={100}
-            className="w-15 h-15 md:w-20 md:h-20 lg:w-22.5 lg:h-22.5"
+            width={90}
+            height={90}
+            className="w-15 h-12.5 md:w-20 md:h-16 lg:w-22.5 lg:h-20"
           />
         </div>
-        {/* <div className="max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2">
-          <Image
-            src="/logo2.webp"
-            alt="آرکات"
-            width={100}
-            height={100}
-            className="h-auto w-20 lg:w-25"
-            priority
-          />
-        </div> */}
-        {/* منوی دسکتاپ */}
         <nav className="hidden items-center gap-x-6 lg:flex 2xl:gap-x-8">
           {HeaderItems.map((item) => (
             <HeaderItem key={item.name} items={item} />
@@ -84,8 +72,6 @@ export default function Header() {
             />
           </div>
         </div>
-
-        {/* چپ: دکمه سرچ (فقط زیر 1024) */}
         <button
           type="button"
           aria-label="جستجو"

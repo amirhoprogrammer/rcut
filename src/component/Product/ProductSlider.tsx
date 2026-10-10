@@ -31,7 +31,6 @@ export default function ProductSlider({ products }: { products: CardItems[] }) {
         </div>
       </div>
 
-      {/* فلش‌ها */}
       <div className="mt-8 flex justify-end gap-2" dir="ltr">
         <Button
           variant="neutral"

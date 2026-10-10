@@ -20,13 +20,11 @@ export default function Card({ items }: { items: CardItems }) {
         />
       </div>
 
-      {/* متن */}
       <div className="flex flex-1 flex-col p-5">
         <h3 className="text-base font-bold text-foreground">{items.title}</h3>
         <p className="mt-3 line-clamp-2 min-h-12 text-sm leading-6 text-muted-foreground ">
           {items.text}
         </p>
-        {/* pt-8 = حداقل ۳۲px فاصله بین متن و دکمه */}
         <div className="mt-8">
           <Button
             size="full"

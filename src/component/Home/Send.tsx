@@ -41,15 +41,12 @@ export default function Send() {
     // 14px = 3.5
     <section className="py-20">
       <div className="w90">
-        {/* عنوان */}
         <div className="text-center">
           <h2 className="text-4xl font-extrabold text-foreground ">
             {titleSend.title}
           </h2>
           <p className="mt-4 text-muted-foreground">{titleSend.text}</p>
         </div>
-
-        {/* آیتم‌ها */}
         <div className="mx-auto mt-14 grid max-w-4xl grid-cols-3">
           {icons.map((item, index) => (
             <div

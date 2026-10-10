@@ -107,8 +107,6 @@ export default function Hero() {
           ))}
         </div>
       </div>
-
-      {/* فلش‌ها */}
       <div className="absolute bottom-8 right-8 z-20 flex gap-2">
         <button
           onClick={prev}
