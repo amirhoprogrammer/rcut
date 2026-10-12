@@ -3,7 +3,12 @@ import FooterList from "./FooterList";
 import { FooterContactItem, FooterLists } from "@/Data/FooterLists";
 import Image from "next/image";
 import FooterContact from "./FooterContact";
-const imageUrls = ["/insta.png", "/whatsapp.jpg", "/bale.webp", "/eita.png"];
+const imageUrls = [
+  { src: "/insta.png", alt: "insta" },
+  { src: "/WhatsApp Green Chat Icon.png", alt: "whatsapp" },
+  { src: "/bale.webp", alt: "bale" },
+  { src: "/eita.png", alt: "eita" },
+];
 
 export default function Footer() {
   return (
@@ -26,36 +31,21 @@ export default function Footer() {
           </p>
           <div className="flex gap-3">
             {/* 30px = 7.5 , 40px = 10, 50px = 12.5*/}
-            <Image
-              src={imageUrls[0]}
-              alt="insta"
-              width={50}
-              height={50}
-              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5 rounded-2xl"
-            />
-            <Image
-              src={imageUrls[1]}
-              alt="whatsapp"
-              width={50}
-              height={50}
-              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5 rounded-2xl"
-            />
-            <Image
-              src={imageUrls[2]}
-              alt="bale"
-              width={50}
-              height={50}
-              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5 rounded-2xl"
-            />
-            <Image
-              src={imageUrls[3]}
-              alt="eitaa"
-              width={50}
-              height={50}
-              className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5 rounded-2xl"
-            />
+            {imageUrls.map((image, index) => (
+              <Image
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                width={50}
+                height={50}
+                className="w-7.5 h-7.5 md:w-10 md:h-10 lg:w-12.5 lg:h-12.5 rounded-2xl relative object-contain "
+              />
+            ))}
           </div>
-          <p className="text-sm">طراحی و توسعه توسط آتی هوش بنیان</p>
+          {/* [351px] = 87.75 */}
+          <p className="text-sm min-w-87.75 text-end">
+            طراحی و توسعه توسط آتی هوش بنیان
+          </p>
         </div>
       </div>
     </footer>

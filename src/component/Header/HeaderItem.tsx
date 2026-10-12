@@ -46,14 +46,14 @@ export default function HeaderItem({ items }: { items: HeaderLink }) {
       <button
         type="button"
         onClick={() => scrollToSection(items.id)}
-        className={`relative flex cursor-pointer items-center gap-x-1 py-2 text-[15px] font-semibold transition-colors group-hover:text-brand ${
+        className={`relative flex cursor-pointer items-center gap-x-1 py-2 text-[17px] font-semibold transition-colors group-hover:text-brand ${
           isActive ? "text-brand" : "text-foreground/75"
         }`}
       >
         {items.name}
 
         {items.children && (
-          <ChevronDown className="size-4 transition-transform duration-300 group-hover:rotate-180" />
+          <ChevronDown className="size-4 transition-transform duration-300 group-hover:rotate-180 mt-1.75" />
         )}
 
         <span

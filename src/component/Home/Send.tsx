@@ -51,9 +51,10 @@ export default function Send() {
           {icons.map((item, index) => (
             <div
               key={item.title}
-              className={
-                index !== icons.length - 1 ? "border-l border-border" : ""
-              }
+              //className={
+              //  index !== icons.length - 1 ? "border-l border-border" : ""
+              //}
+              className="border-l-2 border-l-border last:border-0"
             >
               <Icon items={item} />
             </div>
