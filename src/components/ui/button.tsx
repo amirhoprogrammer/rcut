@@ -10,7 +10,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-brand text-white hover:bg-brand/90", // دکمه «استعلام قیمت»
         neutral:
-          "border border-border bg-background text-foreground hover:bg-brand",
+          "border border-border bg-background text-foreground hover:bg-brand hover:text-background",
         outline:
           "border border-brand text-brand font-semibold bg-transparent hover:bg-brand hover:text-white", // «مشاهده همه محصولات»
         dark: "bg-primary text-white hover:bg-primary-hover",
